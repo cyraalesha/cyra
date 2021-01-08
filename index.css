@@ -170,7 +170,7 @@ h3 {
   padding: calc(var(--gutter) / 2 * 1.5);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   background: #fff;
   border-radius: 8px;
@@ -181,12 +181,10 @@ h3 {
 }
 
 .funtime-pic {
-  position: relative;
   width: 40%;
 }
 
 .justice-pic {
-  position: relative;
   width: 40%;
   margin-bottom: 10px;
 }
