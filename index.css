@@ -1,66 +1,152 @@
-.body {
-  font-family: "Jua", sans-serif;
+.container {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+nav {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  margin-top: -8px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.scrolled-navbar {
+  color: #3f374d;
+}
+nav a {
+  float: left;
+  display: block;
+  font-size: 3vw;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin: 10px;
+  color: #c9ddf8;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5vw;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: aliceblue;
   color: #3f374d;
 }
 
-.name-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #271a7981;
+  backdrop-filter: blur(2px);
+}
+
+.body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0%;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  height: auto;
-  background-color: #c9ecf8;
-  border-width: 2px;
 }
 
-.hello {
-  display: inline;
+.name-container {
+  /*display: flex;
+  flex-direction: column;*/
+  margin-top: -10px;
+  text-align: center;
+  justify-content: center;
+  background-image: url("images/bg.png");
+  background-position: center;
+  background-size: 200%;
+  background-color: #271a79;
+  padding: 200px 0px;
+  font-family: "Comfortaa", cursive;
+}
+
+.intro {
+  color: white;
+  font-family: "Comfortaa", cursive;
   font-size: 30px;
-  letter-spacing: 2px;
-  box-sizing: border-box;
-  margin-top: 10px;
 }
 
-.name {
+@media screen and (min-width: 800px) {
+  .name-container {
+    background-size: 100%;
+  }
+  .title {
+    font-size: 5vw;
+  }
+  .abouttext {
+    font-size: 30px;
+  }
+
+  nav a {
+    font-size: 1.5vw;
+  }
+}
+
+h1 {
+  font-size: 10vw;
+  color: white;
+}
+
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 15px;
+}
+
+.mainbutton {
   display: inline;
-  justify-content: center;
-  font-size: 60px;
-  background-color: #0c2d48;
-  padding: 3px 10px 3px 10px;
-  border-radius: 12px;
-  letter-spacing: 3px;
-  width: auto;
-  height: auto;
-  margin-top: 10px;
-  font-family: "Barlow Condensed", sans-serif;
-}
-
-.name:hover {
-}
-
-.opening-button {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.homebutton {
-  display: inline;
-  background-color: #fae8e0;
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 5px 5px #d6cbc5;
-  font-size: 18px;
-}
-
-#learnmore {
-  margin-top: 40px;
-  margin-bottom: 15px;
-}
-
-#portofolio {
-  margin-bottom: 34px;
+  background-image: linear-gradient(120deg, #288fd8 0%, #5e33c4 100%);
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 25px;
+  color: white;
 }
 
 a {
@@ -68,27 +154,47 @@ a {
   text-decoration: none;
 }
 
-.homebutton:hover {
-  background-color: #c2d1ff;
-  box-shadow: 0px 0px;
-  color: #3f374d;
-}
-
-.dripdown {
-  overflow: hidden;
-}
-
 #about {
+  position: relative;
   font-size: 30px;
   border-radius: 20px;
-  margin-bottom: 50px;
+}
+
+.custom-shape-divider-top-1614319751 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1614319751 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 65px;
+}
+
+.custom-shape-divider-top-1614319751 .shape-fill {
+  fill: #271a79;
+}
+
+.aboutcontainer {
+  margin-top: 5%;
+  display: flex;
+  text-align: center;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .abouttext {
-  margin: auto;
-  text-align: center;
-  /*width: 30vw; for big screens */
   width: 80%;
+  align-items: center;
+  justify-content: center;
+  color: #3f374d;
 }
 
 .aboutlinks {
@@ -144,7 +250,7 @@ a {
 @media only screen and (min-width: 1000px) {
   .worklist {
     grid-gap: calc(var(--gutter) / 2);
-    grid-auto-columns: calc(35% - var(--gutter) * 5);
+    grid-auto-columns: calc(30% - var(--gutter) * 5);
   }
 }
 .worklist:before,
@@ -176,8 +282,20 @@ h3 {
   border-radius: 8px;
 }
 
+.worklist > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
 .portofolio {
-  background-color: #c9ecf8;
+  background-image: linear-gradient(120deg, #1f22bb 0%, #8e20b9 100%);
 }
 
 .funtime-pic {
@@ -185,8 +303,94 @@ h3 {
   width: 40%;
 }
 
+.quoteem-pic {
+  width: 55%;
+}
+
+.quoteem {
+  margin-top: -32px;
+}
+
 .justice-pic {
   position: relative;
   width: 40%;
   margin-bottom: 10px;
+}
+
+.achievement-title {
+  color: white;
+  font-size: 30px;
+}
+
+.portofolio-link {
+  display: block;
+}
+
+.socialmedia {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #3f374d;
+}
+
+.linktitle {
+  display: inline;
+  margin-top: 40px;
+}
+
+.socmedbutton {
+  display: flex;
+  width: 70%;
+  height: 70px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+  border-radius: 15px;
+}
+
+#instagram {
+  background-color: #c9ecf8;
+  margin-top: 30px;
+  box-shadow: 8px 8px #9fbac4;
+}
+
+#youtube {
+  background-color: #f0d7f6;
+  margin-top: 15px;
+  box-shadow: 8px 8px #bda8c2;
+}
+
+#linkedin {
+}
+
+.socmedlogo {
+  position: static;
+  float: left;
+  width: 6%;
+  margin-right: 10px;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%)
+    brightness(140%);
+}
+
+@supports (
+    -webkit-backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)
+  )
+  or (backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) {
+  .navbar-b.navbar-reduce {
+    transition: all 0.5s ease-in-out;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%)
+      brightness(140%);
+  }
 }
